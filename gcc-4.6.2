@@ -1,0 +1,15 @@
+Try to download source from here ======>  http://ftp.gnu.org/gnu/gcc/
+
+I chose version 4.6.2
+
+Just need to follow me:
+
+tar xzf gcc-4.6.2.tar.gz
+cd gcc-4.6.2
+./contrib/download_prerequisites
+cd ..
+mkdir objdir
+cd objdir
+$PWD/../gcc-4.6.2/configure --prefix=$HOME/gcc-4.6.2 
+make
+make install
