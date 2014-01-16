@@ -1,0 +1,49 @@
+Introduction to GDB
+
+GDB, the GNU Project debugger, allows you to see what is going on “inside” another program while it 
+executes -- or what another program was doing at the moment it crashed. Note that GDB is most effective when 
+tracing programs and libraries that were built with debugging symbols and not stripped.
+
+This package is known to build and work properly using an LFS-7.4 platform.
+
+Package Information
+
+Download (HTTP): http://ftp.gnu.org/gnu/gdb/gdb-7.6.2.tar.bz2
+Download (FTP): ftp://ftp.gnu.org/gnu/gdb/gdb-7.6.2.tar.bz2
+Download MD5 sum: 496399e96654fc0f899a5c964bc1f0f8
+Download size: 24 MB
+Estimated disk space required: 359 MB (472 MB with checks)
+Estimated build time: 2.2 SBU (5.5 SBU with checks)
+
+
+Installation of GDB
+
+Install GDB by running the following commands:
+
+./configure --prefix=/usr &&
+make
+
+To test the results, issue: make -k check.
+
+Now, as the root user:
+
+make -C gdb install
+Contents
+
+Installed Programs:
+gdb and gdbserver
+Installed Library:
+libinproctrace.so
+Installed Directories:
+/usr/include/gdb and /usr/share/gdb
+Short Descriptions
+
+gdb
+is the GNU Debugger.
+gdbserver
+is a remote server for the GNU debugger (it allows programs to be debugged from a different machine).
+libinproctrace.so
+contains functions for the in-process tracing agent. The agent allows for installing fast tracepoints,
+listing static tracepoint markers, probing static tracepoints markers, and starting trace monitoring.
+
+Last updated on 2013-12-12 10:27:14 +0000
